@@ -1,0 +1,61 @@
+<div class="dashboard-container">
+    <div class="container-fluid">
+        <div class="dashboard-content">
+            <h4>Welcome {{firstName}} {{lastName}}!</h4>
+            <div class="row">
+                <div class="col dashboard-col">
+                    Upcoming Reservations: 0
+                </div>
+                <div class="col dashboard-col">
+                    Prior Reservations: 0
+                </div>
+                <div class="col dashboard-col">
+                    Cancelled Reservations: 0
+                </div>
+            </div>
+            <hr>
+
+            <div class="row" style="height: 45%;">
+                <h5>Here's whats new:</h5>
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" style="height: 450px; ">
+                        <img src="../../assets/img/night-lights.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Late night hours!</h5>
+                          <p>Late night reservations are now available for your next gathering.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" style="height: 450px; ">
+                        <img src="../../assets/img/bbq.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>BBQ is in the air...</h5>
+                          <p>BBQ's are coming to the pool area for all guests to use.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" style="height: 450px; ">
+                        <img src="../../assets/img/volleyball.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Good game!</h5>
+                          <p>Volleyball nets are now available for your next pool party!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
