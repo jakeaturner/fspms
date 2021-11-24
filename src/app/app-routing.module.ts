@@ -6,6 +6,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent},
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardService]},
+  { path: 'reservation', component: ReservationComponent, canActivate: [AuthGuardService]},
   { path: '**', redirectTo: '/welcome', pathMatch: 'full' },
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
 ];
