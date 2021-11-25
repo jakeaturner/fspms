@@ -17,6 +17,8 @@ import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfirmReservationComponent } from './confirm-reservation/confirm-reservation.component';
+import { ConfirmSuccessComponent } from './confirm-success/confirm-success.component';
 
 //Misc
 
@@ -30,6 +32,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     SignupComponent,
     DashboardComponent,
     ReservationComponent,
+    ConfirmReservationComponent,
+    ConfirmSuccessComponent,
   ],
   imports: [
     BrowserModule,
