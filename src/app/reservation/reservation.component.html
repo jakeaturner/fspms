@@ -1,0 +1,86 @@
+<div class="dashboard-container">
+  <div class="container-fluid">
+    <div class="dashboard-content">
+      <h4>Create New Reservation</h4>
+      <div class="week-header">
+        <p>Available timeslots for the week of: <strong>11/22/2021 - 11/28/2021</strong></p>
+      </div>
+      <div class="row" style="height: 45%;">
+        <div class="mb-3">
+          <div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                  <th>Sunday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td *ngFor="let item of checklist | slice:0:7; let i = index">
+                    <input type="checkbox" class="btn-check" id="selected-item-{{item.id}}"
+                      [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" />
+                    <label class="btn btn-outline-primary" for="selected-item-{{item.id}}">{{item.timeslot}}</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td *ngFor="let item of checklist | slice:7:14; let i = index">
+                    <input type="checkbox" class="btn-check" id="selected-item-{{item.id}}"
+                      [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" />
+                    <label class="btn btn-outline-primary" for="selected-item-{{item.id}}">{{item.timeslot}}</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td *ngFor="let item of checklist | slice:14:21; let i = index">
+                    <input type="checkbox" class="btn-check" id="selected-item-{{item.id}}"
+                      [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" />
+                    <label class="btn btn-outline-primary" for="selected-item-{{item.id}}">{{item.timeslot}}</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td *ngFor="let item of checklist | slice:21:28; let i = index">
+                    <input type="checkbox" class="btn-check" id="selected-item-{{item.id}}"
+                      [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" />
+                    <label class="btn btn-outline-primary" for="selected-item-{{item.id}}">{{item.timeslot}}</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td *ngFor="let item of checklist | slice:28:35; let i = index">
+                    <input type="checkbox" class="btn-check" id="selected-item-{{item.id}}"
+                      [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" />
+                    <label class="btn btn-outline-primary" for="selected-item-{{item.id}}">{{item.timeslot}}</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td *ngFor="let item of checklist | slice:35:42; let i = index">
+                    <input type="checkbox" class="btn-check" id="selected-item-{{item.id}}"
+                      [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" />
+                    <label class="btn btn-outline-primary" for="selected-item-{{item.id}}">{{item.timeslot}}</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td *ngFor="let item of checklist | slice:42:49; let i = index">
+                    <input type="checkbox" class="btn-check" id="selected-item-{{item.id}}"
+                      [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" />
+                    <label class="btn btn-outline-primary" for="selected-item-{{item.id}}">{{item.timeslot}}</label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p><em>Please call our front desk to inquire about special reservation windows.</em></p>
+            <div>
+              <button class="select-reservation btn btn-primary btn-lg" [routerLink]="['/reservation/confirm']" (click)="moveToConfirm()">Select</button>
+              <button class="select-reservation btn btn-outline-danger btn-lg" (click)="uncheckAll()">Clear</button>
+              <button (click)="getCheckedItemList()">Log</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

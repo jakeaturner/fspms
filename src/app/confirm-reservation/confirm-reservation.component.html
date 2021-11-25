@@ -1,0 +1,19 @@
+<div class="dashboard-container">
+    <div class="container-fluid">
+      <div class="dashboard-content">
+        <h4>Confirm Reservation(s)</h4>
+        <div class="row" style="height: 45%;">
+          <div class="mb-3">
+              <p>You selected the following timeslots:</p>
+              <ul class="list-group">
+                <li *ngFor="let selection of selectedTimeslots" class="list-group-item"><strong>Date: </strong> {{selection.date}} <strong>Time:</strong> {{selection.timeslot}}</li>
+              </ul>
+            <br>
+              <p>Is this correct?</p>
+              <button class="cancel-button btn btn-outline-danger" [routerLink]="['/reservation']">Cancel</button>
+              <button class="btn btn-success" [routerLink]="['/reservation/success']">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

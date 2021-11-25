@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -15,7 +15,12 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfirmReservationComponent } from './confirm-reservation/confirm-reservation.component';
+import { ConfirmSuccessComponent } from './confirm-success/confirm-success.component';
 
+//Misc
 
 @NgModule({
   declarations: [
@@ -25,12 +30,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     WelcomeComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    ReservationComponent,
+    ConfirmReservationComponent,
+    ConfirmSuccessComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule,
   ],
   providers: [
     Title, AuthGuardService, AuthService
