@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
     }
     else {
       if (this.email == 'test' && this.password == 'test') {
+        localStorage.clear();
         localStorage.setItem('isAuthenticated', 'true');
         localStorage.setItem('firstName', 'Test');
         localStorage.setItem('lastName', 'User');
