@@ -19,8 +19,8 @@ const routes: Routes = [
   { path: 'reservation', component: ReservationComponent, canActivate: [AuthGuardService]},
   { path: 'reservation/confirm', component: ConfirmReservationComponent, data: {some_data : 'some value'}, canActivate: [AuthGuardService]},
   { path: 'reservation/success', component: ConfirmSuccessComponent, canActivate: [AuthGuardService]},
-  { path: '**', redirectTo: '/welcome', pathMatch: 'full' },
-  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
+  { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({
