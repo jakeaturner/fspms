@@ -2,23 +2,11 @@
     <div class="container-fluid">
         <div class="dashboard-content">
             <h4>Reservation History</h4>
-            <div class="row">
-                <div class="col dashboard-col">
-                    Upcoming Reservations: 0
-                </div>
-                <div class="col dashboard-col">
-                    Prior Reservations: 0
-                </div>
-                <div class="col dashboard-col">
-                    Cancelled Reservations: 0
-                </div>
-            </div>
-            <hr>
-
+            <app-reservations-header></app-reservations-header>
             <div class="row" style="height: 45%;">
                 <h5>Your reservations:</h5>
-                <div class="card-container" *ngFor="let item of confirmedReservations">
-                    <app-reservation-card></app-reservation-card>
+                <div class="col-md-auto" *ngFor="let reservation of confirmedReservations">
+                    <app-reservation-card [reservation]="reservation"></app-reservation-card>
                 </div>
             </div>
         </div>

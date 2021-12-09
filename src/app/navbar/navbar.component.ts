@@ -26,6 +26,7 @@ export class NavbarComponent implements OnInit {
 
   onLogOut() {
     localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('savedReservations');
     this.router.navigate(["login"]);
   }
 }

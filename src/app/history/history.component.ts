@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 interface IConfirmedReservations {
   id?: number;
+  dayOfWeek: string;
   date: string;
-  time: string;
+  timeslot: string;
 }
 
 @Component({
@@ -18,18 +19,7 @@ export class HistoryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.confirmedReservations = [
-      {
-        id: 1,
-        date: '12/11/2021',
-        time: '10:00am'
-      },
-      {
-        id: 2,
-        date: '12/12/2021',
-        time: '10:00am'
-      }
-    ]
+    this.confirmedReservations = JSON.parse(localStorage.getItem('savedReservations') || '{}');
   }
 
 }

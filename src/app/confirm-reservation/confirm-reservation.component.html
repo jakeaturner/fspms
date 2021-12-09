@@ -11,7 +11,7 @@
             <br>
               <p>Is this correct?</p>
               <button class="cancel-button btn btn-outline-danger" [routerLink]="['/reservation']">Cancel</button>
-              <button class="btn btn-success" [routerLink]="['/reservation/success']">Confirm</button>
+              <button class="btn btn-success" (click)="moveToSuccess()">Confirm</button>
           </div>
         </div>
       </div>

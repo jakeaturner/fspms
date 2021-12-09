@@ -10,12 +10,29 @@ import { Location } from '@angular/common';
 export class ConfirmReservationComponent implements OnInit {
   selectedTimeslots: any;
   stateObject: any;
-  constructor(private location:Location) { 
+  tempArray = new Array;
+
+  constructor(private location:Location, private router:Router) { 
   }
 
-  ngOnInit(): void{
+  ngOnInit() {
     this.stateObject = this.location.getState();
     this.selectedTimeslots = this.stateObject[Object.keys(this.stateObject)[0]];
   }
 
+  moveToSuccess() {
+    this.router.navigateByUrl('/reservation/success');
+    this.storeReservations();
+  }
+
+  storeReservations() {
+    if(localStorage.getItem('savedReservations') === null) {
+      localStorage.setItem('savedReservations', JSON.stringify(this.selectedTimeslots));
+    }
+    else {
+      this.tempArray = JSON.parse(localStorage.getItem('savedReservations') || '{}');
+      this.tempArray.push.apply(this.tempArray, this.selectedTimeslots);
+      localStorage.setItem('savedReservations', JSON.stringify(this.tempArray));
+    }
+  }
 }
