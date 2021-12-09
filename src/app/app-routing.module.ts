@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ConfirmReservationComponent } from './confirm-reservation/confirm-reservation.component';
 import { ConfirmSuccessComponent } from './confirm-success/confirm-success.component';
+import { HistoryComponent } from './history/history.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'reservation', component: ReservationComponent, canActivate: [AuthGuardService]},
   { path: 'reservation/confirm', component: ConfirmReservationComponent, data: {some_data : 'some value'}, canActivate: [AuthGuardService]},
   { path: 'reservation/success', component: ConfirmSuccessComponent, canActivate: [AuthGuardService]},
+  { path: 'history', component: HistoryComponent, canActivate: [AuthGuardService]},
   { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];

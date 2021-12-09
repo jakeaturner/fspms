@@ -10,7 +10,6 @@
     border-radius: 15px;
 }
 
-.carousel .item img {
-    max-height: 768px;
-    min-width: auto;
-  }
+.dashboard-col {
+    text-align: center;
+}

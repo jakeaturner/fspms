@@ -8,19 +8,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
   loggedIn = false;
+  authMessage = 'Welcome!';
   
   constructor(private router: Router, private authService: AuthService) { 
     this.loggedIn = this.authService.isUserLoggedIn();
   }
 
   ngOnInit(): void {
-    
+    if (this.loggedIn) {
+      this.authMessage = 'Log Out';
+    }
+    else {
+      this.authMessage = 'Welcome!';
+    }
   }
 
   onLogOut() {
     localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('savedReservations');
     this.router.navigate(["login"]);
   }
 }

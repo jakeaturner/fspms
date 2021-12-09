@@ -2,19 +2,7 @@
     <div class="container-fluid">
         <div class="dashboard-content">
             <h4>Welcome {{firstName}} {{lastName}}!</h4>
-            <div class="row">
-                <div class="col dashboard-col">
-                    Upcoming Reservations: 0
-                </div>
-                <div class="col dashboard-col">
-                    Prior Reservations: 0
-                </div>
-                <div class="col dashboard-col">
-                    Cancelled Reservations: 0
-                </div>
-            </div>
-            <hr>
-
+            <app-reservations-header></app-reservations-header>
             <div class="row" style="height: 45%;">
                 <h5>Here's whats new:</h5>
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">

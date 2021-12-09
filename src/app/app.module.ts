@@ -19,8 +19,13 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmReservationComponent } from './confirm-reservation/confirm-reservation.component';
 import { ConfirmSuccessComponent } from './confirm-success/confirm-success.component';
+import { HistoryComponent } from './history/history.component';
+
+//Modules
+import { SharedComponentsModule } from './shared-components/shared-components.module';
 
 //Misc
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
   declarations: [
@@ -34,12 +39,15 @@ import { ConfirmSuccessComponent } from './confirm-success/confirm-success.compo
     ReservationComponent,
     ConfirmReservationComponent,
     ConfirmSuccessComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NoopAnimationsModule,
+    SharedComponentsModule,
+    FontAwesomeModule
   ],
   providers: [
     Title, AuthGuardService, AuthService
